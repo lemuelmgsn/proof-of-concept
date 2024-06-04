@@ -1,0 +1,110 @@
+:root {
+    /* BORDER RADIUS (TOT 959PX) */
+
+    --extra-small-mobile: 8px;
+    --small-mobile: 8px;
+    --medium-mobile: 24px;
+    --large-mobile: 32px;
+    --extra-large-mobile: 32px;
+
+    /* BORDER RADIUS VANAF 960PX */
+
+    --small-desktop: 16px;
+    --extra-large-desktop: 40px;
+
+    /* NEUTRAL COLOURS */
+
+    --black: #000000;
+    --white: #ffffff;
+    --grey-5: #f6f6f6;
+    --grey-10: #eeeeee;
+    --grey-20: #e2e2e2;
+    --grey-30: #cbcbcb;
+    --grey-40: #afafaf;
+    --grey-50: #757575;
+    --grey-60: #545454;
+    --grey-70: #333333;
+    --grey-80: #1f1f1f;
+
+    /* PRIMARY COLOURS */
+
+    --blue-70: #426ddb;
+    --blue-80: #2c5ddb;
+    --blue-90: #164ddb;
+    --blue-100: #003ddb;
+    --blue-110: #0036c2;
+    --blue-120: #002fa8;
+    --blue-130: #00288f;
+
+    /* SECONDARY COLOURS */
+    
+    --red-70: #db4242;
+    --red-80: #db2c2c;
+    --red-90: #db1616;
+    --red-100: #db0000;
+    --red-110: #c20000;
+    --red-120: #a80000;
+    --red-130: #8f0000;
+    
+    /* TERTIARY COLOURS */
+    
+    --green-70: #39be46;
+    --green-80: #2bd93d;
+    --green-90: #00d916;
+    --green-100: #00be13;
+    --green-110: #00a611;
+    --green-120: #008c0e;
+    --green-130: #00730b;
+
+    /* SYSTEM COLOURS */
+
+    --succes-150: #00662d;
+    --succes-100: #009944;
+    --succes-50: #00cc5b;
+
+    --error-150: #9c000b;
+    --error-100: #cf000f;
+    --error-50: #ff0012;
+
+    --warning-150: #bd4218;
+    --warning-100: #f0541E;
+    --warning-50: #ff794a;
+
+    --info-150: #4c93ab;
+    --info-100: #63c0df;
+    --info-50: #71dcff;
+
+    /* BOX SHADOW */
+
+    --large-box-shadow: 0px 5px 10px 0px #00000040;
+    --medium-box-shadow: 0px 5px 10px 0px #00000026;
+    --small-box-shadow: 0px 5px 10px 0px #0000001A;
+
+    /* GRID WIDTH */
+    --xl-grid: 1440px;
+    --md-grid: 765px;
+    --xs-grid: 375px;
+
+    /* HEADINGS */
+
+    --heading-1-desktop: 80px;
+    --heading-1-mobile: 36px;
+
+    --heading-2-desktop: 56px;
+    --heading-2-mobile: 32px;
+
+    --heading-3-desktop: 56px;
+    --heading-3-mobile: 24px;
+
+    --heading-4-desktop: 40px;
+    --heading-4-mobile: 24px;
+
+    --heading-5-desktop: 32px;
+    --heading-5-mobile: 20px;
+
+    --heading-6-desktop: 24px;
+    --heading-6-mobile: 20px;
+    
+    --paragraph: 16px;
+    
+}
