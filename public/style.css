@@ -4,6 +4,10 @@ html{
     height: 100%;
     font-family: sans-serif;
 }
+main{
+    display: flex;
+    justify-content: center;
+}
 header{
     display: flex;
     justify-content: center;
@@ -14,4 +18,7 @@ header{
 }
 h1{
     color: black;
+}
+p{
+    width: 40em;
 }

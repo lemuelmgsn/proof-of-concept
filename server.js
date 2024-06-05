@@ -38,9 +38,7 @@ app.use(express.urlencoded({extended: true}))
 
 app.get('/', function(request, response) {
   fetchJson(apiUrl).then((apiData) => {
-    response.render('index', {
-      data: apiData.data
-    })
+    response.render('index', {article: apiData})
   });
 })
 

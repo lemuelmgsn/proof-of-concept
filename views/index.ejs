@@ -3,8 +3,12 @@
 <main>
 
 <section>
-    <h1><%= data.title %></h1>
-    <h2><%= data.subtitle %></h2>
+    <% article.data.forEach(article => {%>
+       <h1>Exposense</h1>
+
+        <p><%= article.intro %></p>
+    
+    <%}) %>
 
 
 </section>
