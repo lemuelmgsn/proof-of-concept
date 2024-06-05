@@ -6,6 +6,8 @@ import fetchJson from "./helpers/fetch-json.js"
 
 let app = express()
 
+let apiUrl = 'https://fdnd-agency.directus.app/items/DPI_TNO?fields=*'
+
 app.set("view engine", "ejs")
 
 app.set("views", "./views")
@@ -16,14 +18,12 @@ app.use(express.urlencoded({ extended: true }))
 
 // 2. ROUTES
 
-app.get("/", function (request, response) {
-  fetchJson('https://fdnd-agency.directus.app/items/DPI_TNO')
-    .then(function(introData) {
-      response.render('index', {
-        introData: introData
+app.get('/', function(request, response) {
+  fetchJson(apiUrl).then((apiData) => {
+    response.render('index',
+     {chapters: apiData})
       });
     });
-});
 
 // 3. START DE WEBSERVER
 
