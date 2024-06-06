@@ -6,7 +6,7 @@ import fetchJson from "./helpers/fetch-json.js"
 
 let app = express()
 
-let apiUrl = 'https://fdnd-agency.directus.app/items/DPI_TNO?fields=*'
+let apiUrl = 'https://fdnd-agency.directus.app/items/DPI_TNO?fields=*.*'
 
 app.set("view engine", "ejs")
 
@@ -19,9 +19,10 @@ app.use(express.urlencoded({ extended: true }))
 // 2. ROUTES
 
 app.get('/', function(request, response) {
-  fetchJson(apiUrl).then((apiData) => {
-    response.render('index',
-     {chapters: apiData})
+  fetchJson(apiUrl)
+  .then((apiData) => {
+    response.render('index', {
+      tno: apiData.data})
       });
     });
 
