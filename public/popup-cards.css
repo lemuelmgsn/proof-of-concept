@@ -1,0 +1,31 @@
+.popup-cards{
+    display: block;
+    max-width: 30em;
+    margin: 1em;
+    padding: 1em;
+    background-color: var(--primary-grey);
+
+    & h2{
+        color: var(--primary-blue);
+    }
+
+    & p{
+        color: var(--primary-black);
+    }
+}
+.close-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    margin-left: auto;
+    width: 1em;
+}
+a{
+    color: var(--primary-blue);
+    background-color: white;
+    text-decoration: none;
+    padding: .5em 1em;
+    border-radius: 1em;
+    margin-left: auto;
+    font-weight: 600;
+}

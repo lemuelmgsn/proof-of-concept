@@ -12,7 +12,7 @@ import fetchJson from './helpers/fetch-json.js'
 
 
 // const apiUrl = 'https:fdnd-agency.directus.app/items/f_houses' moet nog veranderen naar nieuwe url met API
-const apiUrl = 'https://fdnd-agency.directus.app/items/DPI_TNO?fields=*'
+const apiUrl = 'https://fdnd-agency.directus.app/items/DPI_TNO?fields=*.*.*.*'
 
 
 
@@ -39,12 +39,12 @@ app.use(express.urlencoded({extended: true}))
 app.get('/', function(request, response) {
   fetchJson(apiUrl).then((apiData) => {
     response.render('index', {
-      article: apiData})
+      tno: apiData.data})
   });
 })
 
 app.get('/', function(request, response) {
-  fetchJson('https://fdnd-agency.directus.app/items/DPI_TNO?fields=*').then((apiData) => {
+  fetchJson('https://fdnd-agency.directus.app/items/DPI_TNO?fields=*.*').then((apiData) => {
     response.render('index', {
       popup: apiData})
   });

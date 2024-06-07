@@ -2,7 +2,15 @@ html{
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
+
+    
+    --primary-blue: #123EB7;
+    --primary-grey: #F0F3FA;
+    --primary-orange: #F57118;
+    --primary-black: #00030A;
+
+      
 }
 section{
     /* display: flex; */
@@ -18,7 +26,7 @@ header{
 }
 h1{
     color: black;
-    /* padding: 1em; */
+    padding-left: .7em;
 }
 p{
     max-width: 40em;
