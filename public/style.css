@@ -1,4 +1,4 @@
-:root {
+  :root {
     /* BORDER RADIUS (TOT 959PX) */
 
     --extra-small-mobile: 8px;
@@ -106,4 +106,36 @@
     --heading-6-mobile: 20px;
     
     --paragraph: 16px;
-}
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url(/font/Roboto-Regular.ttf);
+  }
+
+  *, html {
+    box-sizing: border-box;
+    font-family: "Roboto";
+    margin: 0;
+    padding: 0;
+  }
+
+  header{
+    height: 5em;
+    width: 100;
+    background: var(--grey-20);
+  }
+
+  h1 {
+    font-size: var(--heading-1-mobile);
+    text-align: center; 
+  }
+
+  p {
+    font-size: var(--paragraph);
+    max-width: 327px;
+    margin: 2em;
+  }
+
+  
+  
