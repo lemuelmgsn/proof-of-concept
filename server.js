@@ -38,7 +38,15 @@ app.use(express.urlencoded({extended: true}))
 
 app.get('/', function(request, response) {
   fetchJson(apiUrl).then((apiData) => {
-    response.render('index', {article: apiData})
+    response.render('index', {
+      article: apiData})
+  });
+})
+
+app.get('/', function(request, response) {
+  fetchJson('https://fdnd-agency.directus.app/items/DPI_TNO?fields=*').then((apiData) => {
+    response.render('index', {
+      popup: apiData})
   });
 })
 

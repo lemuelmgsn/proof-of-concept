@@ -2,7 +2,7 @@
 
 <main>
 
-<section>
+<section class="intro">
     <% article.data.forEach(article => {%>
        <h1>Exposense</h1>
 
@@ -10,9 +10,34 @@
     
     <%}) %>
 
+    <%- include('./partials/svg') %>
+
 
 </section>
 
+
+
+
+<svg width="328" height="191" viewBox="0 0 328 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0.324951 99.985L156.789 190.312L327.139 91.5032L171.152 0.528076L0.324951 99.985Z" fill="black"/>
+    </svg>
+    
+
+
+<div class="center">
+    <!-- <button id="open-popup" class="btn">+</button> -->
+</div>
+<div class="popup" id="popup">
+    <div class="overlay"></div>
+    <div class="popup-content">
+        <h2>Titel van de popup</h2>
+        <p>Content van de popup</p>
+        <div class="controls">
+            <button class="close-btn">Close</button>
+            <button class="submit-btn">submit</button>
+        </div>
+    </div>
+</div>
 
 
 

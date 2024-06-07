@@ -1,0 +1,18 @@
+function createPopup (id){
+    let popupNode = document.querySelector(id);
+    let overlay = popupNode.querySelector(".overlay");
+    let closeBtn = popupNode.querySelector(".close-btn");
+    function openPopup(){
+        popupNode.classList.add("active")
+    }
+    function closePopup(){
+        popupNode.classList.remove("active")
+    }
+    overlay.addEventlistener("click", closePopup);
+    closeBtn.addEventlistener("click", closePopup);
+    return openPopup;
+}
+
+let popup = createPopup("#popup");
+document.querySelector("#open-popup").addEventListener("click", popup)
+console.log(popup)
