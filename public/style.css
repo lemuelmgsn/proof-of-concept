@@ -1,8 +1,9 @@
 html{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     height: 100%;
-    font-family: "Poppins", sans-serif;
+    font-family: "Object-sans";
 
     
     --primary-blue: #123EB7;
@@ -12,17 +13,24 @@ html{
 
       
 }
+@font-face {
+    font-family: "Object-sans";
+    src: url(/fonts/ObjectSans-Regular.ttf);
+}
 section{
     /* display: flex; */
     justify-content: center;
 }
-header{
+header, footer{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     background-color: rgb(217, 217, 217);
     font-size: 2em;
+}
+footer{
+    height: 50px;
 }
 h1{
     color: black;
@@ -32,11 +40,28 @@ p{
     max-width: 40em;
     padding: 1em;
 }
-
+.intro-div{
+    margin: auto;
+}
 .btn{
-    border-radius: 1em;
+    border-radius: 50%;
+    scale: 1;
+    height: 30px;
+    width: 30px;
+    color: var(--primary-black);
+    background-color: var(--primary-orange);
+    border: none;
+    font-size: 1.5em;
+    transition: .5s;
+}
+.btn:hover{
+    background-color: #E5A378;
 }
 
+
+
+
+/* popup JS */
 .center{
     position: absolute;
     top: 80%;
@@ -121,3 +146,12 @@ p{
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
+.close-btn{
+    height: 30px;
+    width: 30px;
+}
+.bekijk-video:hover{
+    color: white;
+    background-color: #123EB7;
+}
+/*  */

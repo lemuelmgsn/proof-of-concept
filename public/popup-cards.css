@@ -1,7 +1,8 @@
 .popup-cards{
     display: block;
-    max-width: 30em;
-    margin: 1em;
+    max-width: 40em;
+    margin: auto;
+    margin-bottom: 2em;
     padding: 1em;
     background-color: var(--primary-grey);
 
@@ -25,7 +26,8 @@ a{
     background-color: white;
     text-decoration: none;
     padding: .5em 1em;
-    border-radius: 1em;
+    border-radius: 32px;
     margin-left: auto;
     font-weight: 600;
+    transition: .5s;
 }

@@ -15,4 +15,3 @@ function createPopup (id){
 
 let popup = createPopup("#popup");
 document.querySelector("#open-popup").addEventListener("click", popup)
-console.log(popup)
