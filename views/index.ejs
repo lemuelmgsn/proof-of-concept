@@ -1,19 +1,54 @@
 <%- include('./partials/head') %>
+<main>
+<!-- mobile -->
 
-
+    <% tno.forEach(tno => {%> 
+        <p id="intro"><%= tno.intro %></p>
+    <% }) %>
+    
 <% tno.forEach(item => { %>
     <% item.chapters.forEach(chapter => { %>
+        <button class="openPopup" data-popup-id="moreInf-<%= chapter.id %>">+</button>
         <article>
-            <div  class="popup" popover id="moreInf-<%= chapter.id %>">
-                <!-- <button class="closePopupButton"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--black)" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 14.545 1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z"/></svg></button> -->
-                <img src="/images/<%= chapter.id %>.<%= chapter.title %>.svg" alt="<%= chapter.title %>">
+            <div class="mobilePopup" id="moreInf-<%= chapter.id %>">
+                <button class="closePopupButton"> <img src="/images/closeButton.svg" alt="close popup">
+                </button>
+                <img class= "popupImage"/images/<%= chapter.id %>.<%= chapter.title %>.svg" alt="<%= chapter.title %>">
                 <p class="title"><%= chapter.id %> <%= chapter.title %></p>
                 <p class="content"><%- chapter.content %></p>
+                <!-- <a href="#"> Bekijk de video <img src="/images/arrow.svg"></a> -->
             </div>
-            <button class="popoverButton" popovertarget="moreInf-<%= chapter.id %>">+</button>
         </article>
-    <% }) %>
+    <% }); %>
     <%- include('./partials/infographic') %>
-<% }) %>
+    <% }) %>
+
+
+
+
+
+    <!-- desktop -->
+    <!-- <% tno.forEach(tno => {%> 
+         <p id="intro"><%= tno.intro %></p>
+    <% }) %>
+
+    <% tno.forEach(item => { %>
+        <% item.chapters.forEach(chapter => { %>
+            <article>
+                <div  class="popup" popover id="moreInf-<%= chapter.id %>">
+                    <button class="closePopupButton"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--black)" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 14.545 1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z"/></svg></button>
+                    <img src="/images/<%= chapter.id %>.<%= chapter.title %>.svg" alt="<%= chapter.title %>">
+                    <p class="title"><%= chapter.id %> <%= chapter.title %></p>
+                    <p class="content"><%- chapter.content %></p>
+                    <a href="#"> Bekijk de video <img src="/images/arrow.svg"></a>
+                </div>
+                <button class="popoverButton" popovertarget="moreInf-<%= chapter.id %>">+</button>
+            </article>
+        <% }) %>
+        <%- include('./partials/infographic') %>
+    <% }) %> -->
+
+</main>
 
 <%- include('./partials/foot') %>
+
