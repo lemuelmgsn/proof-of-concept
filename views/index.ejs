@@ -16,13 +16,13 @@
                     <picture>
                         <source type="image/avif" srcset="/images/closeButton.avif">
                         <source type="image/webp" srcset="/images/closeButton.webp">
-                        <img class="popupImage" src="/images/closeButton.svg" alt="close popup">
+                        <img class="popupImage" src="/images/closeButton.svg" alt="close popup" loading="lazy">
                     </picture>                    
                 </button>
                 <picture>
                     <source type="image/avif" srcset="/images/<%= chapter.id %>.<%= chapter.title %>.avif">
                     <source type="image/webp" srcset="/images/<%= chapter.id %>.<%= chapter.title %>.webp">
-                        <img class="popupImage" src="/images/<%= chapter.id %>.<%= chapter.title %>.svg" alt="<%= chapter.title %>">
+                    <img class="popupImage" src="/images/<%= chapter.id %>.<%= chapter.title %>.svg" alt="<%= chapter.title %>" loading="lazy">
                   </picture>                
                   <p class="title"><%= chapter.id %> <%= chapter.title %></p>
                 <p class="content"><%- chapter.content %></p>
@@ -30,7 +30,7 @@
                     <picture>
                     <source type="image/avif" srcset="/images/arrow.avif">
                     <source type="image/webp" srcset="/images/arrow.webp">
-                        <img src="/images/arrow.svg" alt="Arrow">
+                    <img src="/images/arrow.svg" alt="Arrow" loading="lazy">
                     </picture>
                 </a> -->
             </div>
@@ -54,7 +54,7 @@
                    <picture>
                         <source type="image/avif" srcset="/images/<%= chapter.id %>.<%= chapter.title %>.avif">
                         <source type="image/webp" srcset="/images/<%= chapter.id %>.<%= chapter.title %>.webp">
-                            <img class="popupImage" src="/images/<%= chapter.id %>.<%= chapter.title %>.svg" alt="<%= chapter.title %>">
+                        <img class="popupImage" src="/images/<%= chapter.id %>.<%= chapter.title %>.svg" alt="<%= chapter.title %>" loading="lazy">
                     </picture> 
                     <p class="title"><%= chapter.id %> <%= chapter.title %></p>
                     <p class="content"><%- chapter.content %></p>
@@ -62,7 +62,7 @@
                         <picture>
                             <source type="image/avif" srcset="/images/arrow.avif">
                             <source type="image/webp" srcset="/images/arrow.webp">
-                                <img src="/images/arrow.svg" alt="Arrow">
+                            <img src="/images/arrow.svg" alt="Arrow" loading="lazy">
                         </picture>
                     </a>
                 </div>
