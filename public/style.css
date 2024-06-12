@@ -41,7 +41,12 @@ p{
     padding: 1em;
 }
 .intro-div{
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    /* margin: auto; */
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2em;
 }
 .btn{
     border-radius: 50%;
@@ -156,3 +161,17 @@ p{
     background-color: #123EB7;
 }
 /*  */
+
+
+
+#bouw, #recreatie, #bakkerij, #wonen, #industrie:hover{
+    background-color: #E5A378;
+}
+
+.cls-89:hover{
+   fill: #E5A378;
+   transition: .3s;
+}
+svg{
+    max-width: 700px;
+}
