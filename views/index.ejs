@@ -2,6 +2,13 @@
 
 <main>
 
+
+
+
+
+
+
+
 <section class="intro">
     <% tno.forEach(tno => {%>
         <div class="intro-div">
@@ -9,7 +16,9 @@
             <p><%= tno.intro %></p>
             <p><%= tno.content %></p>
         </div>
-       
+
+    <%- include('./partials/svg-test') %>  
+        
         <% tno.chapters.forEach(chapter => {%>
 
         <article class="popup-cards">
@@ -19,16 +28,15 @@
             <a href="/" class="bekijk-video">Bekijk de video -></a>
         </article>
 
+
         <%}) %>
 
     
     <%}) %>
 
-
-
 </section>
 
-   
+
 
 <div class="center">
     <button id="open-popup" class="btn">+</button>
@@ -44,8 +52,6 @@
         </div>
     </div>
 </div>
-
-
 
 
 
