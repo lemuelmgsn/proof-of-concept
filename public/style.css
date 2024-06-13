@@ -193,7 +193,7 @@
 .mobilePopup.active {
 display: block;
 }
-  
+
 .closePopupButton {
   background-color: transparent;
   border: 0em;
@@ -223,7 +223,74 @@ display: block;
   margin: 0 0 1em 0;
 } 
 
-  /* inforgraphic moet nog komen */
+  /* inforgraphic */
+
+  #infographicContainer {
+    width: 23em;
+  }
+
+  #infographic {
+    width: 23em;
+    position: relative;
+    margin: 1em;
+  }
+
+  .fijnstof {
+    animation: fijnstofAnimatie infinite 0.5s;
+  }
+
+  @keyframes fijnstofAnimatie {
+    0%, 50%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(0.1deg);
+    }
+    75% {
+      transform: rotate(-0.1deg);
+    }
+  }
+  
+
+  .zoom {
+  scale: 1.2;
+  }
+    
+  .openPopup:nth-of-type(1) {
+    position: absolute;
+    bottom: 4em;
+    left: 2em;
+    z-index: 2;
+  }
+
+  .openPopup:nth-of-type(2) {
+    position: absolute;
+    bottom: 0.5em;
+    left: 7em;
+    z-index: 2;
+  }
+
+  .openPopup:nth-of-type(3) {
+    position: absolute;
+    bottom: 5em;
+    left: 11em;
+    z-index: 2;
+  }
+
+  .openPopup:nth-of-type(4) {
+    position: absolute;
+    bottom: 5em;
+    left: 15em;
+    z-index: 2;
+    
+  }
+
+  .openPopup:nth-of-type(5) {
+    position: absolute;
+    bottom: 9em;
+    left: 9em;
+    z-index: 2;
+  }
 
   footer {
     background: var(--grey-20);
@@ -232,30 +299,4 @@ display: block;
     padding: 1em;
     margin: auto;
     width: 100vw;
-  }
-
-  @media (min-width: 768px) {
-    .popup {
-      width: 326px;
-      border: none;
-      background: var(--tno-grey);
-      padding: 2em;
-      margin: 2em;
-      height: max-content;  
-    }
-  
-    .popup img {
-      height: max-content;
-      width: 12em;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin: 0 2.5em 1em 2.5em;
-    }
-  
-    .popup .title {
-      color: var(--tno-blue);
-      font-weight: bold;
-      margin: 0 0 1em 0;
-    }  
   }
