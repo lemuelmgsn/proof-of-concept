@@ -109,6 +109,7 @@
     
     --paragraph: 16px;
   }
+   /* ALGEMENE STYLING */
 
   @font-face {
     font-family: "Object sans";
@@ -141,98 +142,107 @@
     text-align: center; 
   }
 
-  p {
-    font-size: var(--paragraph);
-    max-width: 327px;
+  main {
+    height: 100vh;
   }
 
-  #intro {
+  footer {
+    background: var(--grey-20);
+    height: 6em;
+    width: 100vw;
+  }
+
+  /* INTRO TEXT */
+
+  .intro {
+    font-size: var(--paragraph);
+    width: clamp(16em, 50vw, 34em);
     margin: 2em;
   }
 
-.popoverButton, .openPopup {
-  border-radius: 50%;
-  cursor: pointer;
-  background: var(--warning-50);
-  border: none;
-  width: 24px;
-  font-size: 20px;
-  margin: 1em;
-  animation: buttonClickAnimation 1.5s infinite linear;
-}
+  /* POP UP BUTTON */
 
-@keyframes buttonClickAnimation {
-  0%, 
-  100% { scale: 1; }
-  50% { scale: 1.1; }
-}
+  .openPopup {
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--warning-50);
+    border: none;
+    width: 24px;
+    font-size: 20px;
+    margin: 1em;
+    animation: buttonClickAnimation 1.5s infinite linear;
+  }
 
-  .moreInf-1, 
-  .moreInf-2, 
-  .moreInf-3, 
-  .moreInf-4, 
-  .moreInf-5 {
-    padding: 2em;
+  @keyframes buttonClickAnimation {
+    0%, 
+    100% { scale: 1; }
+    50% { scale: 1.2; }
   }
   
-.mobilePopup {
-  width: 326px;
-  border: none;
-  background: var(--tno-grey);
-  padding: 2em;
-  margin: 2em;
-  height: max-content;  
-  display: none;
-  position: relative;
-}
+  /* POP UP STYLING */
 
-.closedPopup {
-  display: none;
-}
+  .mobilePopup {
+    width: 326px;
+    border: none;
+    background: var(--tno-grey);
+    padding: 2em;
+    margin: 2em;
+    height: max-content;  
+    display: none;
+    position: relative;
+  }
 
-.mobilePopup.active {
-display: block;
-}
+  .closedPopup {
+    display: none;
+  }
 
-.closePopupButton {
-  background-color: transparent;
-  border: 0em;
-  color: var(--black);
-  font-size: 2em;
-  position: absolute;
-  right: 0.2em;
-  top: 0.2em;
-  transition: all 0.6s ease-in;
-  cursor: pointer;
-  transform: scale(0.5);
-  scale: 0.8;
-}
+  .mobilePopup.active {
+  display: block;
+  }
 
-.mobilePopup img .popupImage{
-  height: max-content;
-  width: 12em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0 2.5em 1em 2.5em;
-}
+  .closePopupButton {
+    background-color: transparent;
+    border: 0em;
+    color: var(--black);
+    font-size: 2em;
+    position: absolute;
+    right: 0.2em;
+    top: 0.2em;
+    transition: all 0.6s ease-in;
+    cursor: pointer;
+    transform: scale(0.5);
+    scale: 0.8;
+  }
 
-.mobilePopup .title {
-  color: var(--tno-blue);
-  font-weight: bold;
-  margin: 0 0 1em 0;
-} 
+  .mobilePopup img .popupImage{
+    height: max-content;
+    width: 12em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 2.5em 1em 2.5em;
+  }
 
-  /* inforgraphic */
+  .mobilePopup .title {
+    color: var(--tno-blue);
+    font-weight: bold;
+    margin: 0 0 1em 0;
+  } 
+
+  /* INFOGRAPHIC */
 
   #infographicContainer {
-    width: 23em;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
   #infographic {
-    width: 23em;
-    position: relative;
-    margin: 1em;
+    width: 100%;
+    height: auto;
+    max-width: 36em;
   }
 
   .fijnstof {
@@ -250,53 +260,14 @@ display: block;
       transform: rotate(-0.1deg);
     }
   }
-  
 
-  .zoom {
-  scale: 1.2;
-  }
-    
-  .openPopup:nth-of-type(1) {
-    position: absolute;
-    bottom: 4em;
-    left: 2em;
-    z-index: 2;
+  @media (width > 37.5em) {
+    .intro {
+      width: 34em;
+      margin: 2em auto 2em auto;
+    }
   }
 
-  .openPopup:nth-of-type(2) {
-    position: absolute;
-    bottom: 0.5em;
-    left: 7em;
-    z-index: 2;
-  }
+  @media (width > 46.8em) {
 
-  .openPopup:nth-of-type(3) {
-    position: absolute;
-    bottom: 5em;
-    left: 11em;
-    z-index: 2;
-  }
-
-  .openPopup:nth-of-type(4) {
-    position: absolute;
-    bottom: 5em;
-    left: 15em;
-    z-index: 2;
-    
-  }
-
-  .openPopup:nth-of-type(5) {
-    position: absolute;
-    bottom: 9em;
-    left: 9em;
-    z-index: 2;
-  }
-
-  footer {
-    background: var(--grey-20);
-    height: 6em;
-    text-align: center;
-    padding: 1em;
-    margin: auto;
-    width: 100vw;
   }

@@ -3,15 +3,15 @@
 <main>
 <!-- mobile -->
 
-    <% tno.forEach(tno => {%> 
-        <p id="intro"><%= tno.intro %></p>
+    <% tno.forEach(tno => { %>
+        <p class="intro"><%= tno.intro %></p>
     <% }) %>
+    
     
     <%- include('./partials/infographic') %>
 
             <% tno.forEach(item => { %>
                 <% item.chapters.forEach(chapter => { %>
-                    <button class="openPopup" data-popup-id="moreInf-<%= chapter.id %>">+</button>
                     <article>
                         <div class="mobilePopup" id="moreInf-<%= chapter.id %>">
                             <button class="closePopupButton">
@@ -38,7 +38,7 @@
                         </div>
                     </article>
                 <% }); %>
-                <% }) %>
+            <% }) %>
 
 </main>
 

@@ -14,11 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.closePopupButton').forEach(button => {
         button.addEventListener('click', () => {
             button.closest('.mobilePopup').classList.remove('active')
-            button.closest('#infographic').document.classList.remove('zoom')
 
         });
     });
 });
-
-
-// Zoom button
