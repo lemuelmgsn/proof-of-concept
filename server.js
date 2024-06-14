@@ -43,13 +43,12 @@ app.get('/', function(request, response) {
   });
 })
 
-app.get('/1.Persoonlijke-Blootstellingprofielen', function(request, response) {
-  fetchJson(apiUrl).then((apiData) => {
+app.get('/1. Persoonlijke blootstellingsprofielen', function(request, response) {
+  fetchJson('https://fdnd-agency.directus.app/items/DPI_TNO?fields=*.*.*').then((apiData) => {
     response.render('1-pb', {
       tno: apiData.data})
   });
 })
-
 
 
 

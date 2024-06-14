@@ -32,3 +32,20 @@ a{
     font-weight: 600;
     transition: .5s;
 }
+.card-content{
+    display: flex;
+    flex-direction: column;
+}
+.svg-image{
+    max-height: 200px;
+}
+
+@media only screen and (min-width: 800px) {
+    .card-content {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .svg-image{
+        max-height: 400px   ;
+    }
+  }
