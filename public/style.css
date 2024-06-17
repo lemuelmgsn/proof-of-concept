@@ -66,18 +66,6 @@ p{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* popup JS */
 .center{
     position: absolute;
@@ -85,7 +73,7 @@ p{
     left: 10%;
     transform: translate(-50%, -50%);
 }
-.popup{
+.popup-cards{
     position: fixed;
     top: 100vh;
     left: 0px;

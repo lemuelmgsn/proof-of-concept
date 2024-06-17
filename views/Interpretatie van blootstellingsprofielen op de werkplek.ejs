@@ -15,10 +15,10 @@
 
     
         
-        <% tno.chapters.slice(1, 2).forEach(chapter => {%>
+        <% tno.chapters.slice(4, 5).forEach(chapter => {%>
 
         <article class="popup-cards">
-            <button class="close-btn"><%- include('./partials/close-btn') %></button>
+            <a href="/" class="close-btn"><%- include('./partials/close-btn') %></a>
                 <div class="card-content">
                     <img src="/svg/exposense SVG/<%= chapter.title %>.svg" class="svg-image">
                         <div>
@@ -41,7 +41,7 @@
 
 
 <div class="center">
-    <button id="open-popup" class="btn">+</button>
+    <!-- <button id="open-popup" class="btn">+</button> -->
 </div>
 <div class="popup" id="popup">
     <div class="overlay"></div>

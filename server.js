@@ -43,9 +43,38 @@ app.get('/', function(request, response) {
   });
 })
 
-app.get('/1. Persoonlijke blootstellingsprofielen', function(request, response) {
-  fetchJson('https://fdnd-agency.directus.app/items/DPI_TNO?fields=*.*.*').then((apiData) => {
-    response.render('1-pb', {
+
+app.get('/Persoonlijke-blootstellingsprofielen', function(request, response) {
+  fetchJson(apiUrl).then((apiData) => {
+    response.render('Persoonlijke blootstellingsprofielen', {
+      tno: apiData.data})
+  });
+})
+
+app.get('/Kaarten-van-blootstelling-op-bevolkingsniveau', function(request, response) {
+  fetchJson(apiUrl).then((apiData) => {
+    response.render('Kaarten van blootstelling op bevolkingsniveau', {
+      tno: apiData.data})
+  });
+})
+
+app.get('/Kristallijn-silica-sensor', function(request, response) {
+  fetchJson(apiUrl).then((apiData) => {
+    response.render('Kristallijn silica sensor', {
+      tno: apiData.data})
+  });
+})
+
+app.get('/PM-sensor-met-in-line-chemische-identificatie', function(request, response) {
+  fetchJson(apiUrl).then((apiData) => {
+    response.render('PM-sensor met in-line chemische identificatie', {
+      tno: apiData.data})
+  });
+})
+
+app.get('/Interpretatie-van-blootstellingsprofielen-op-de-werkplek', function(request, response) {
+  fetchJson(apiUrl).then((apiData) => {
+    response.render('Interpretatie van blootstellingsprofielen op de werkplek', {
       tno: apiData.data})
   });
 })

@@ -61,10 +61,10 @@ if (popup) {
 
 // test met Sanne
 
-const recreatieButton = document.querySelector("#recreatie, #bouw, #bakker, #wonen, #industrie");
+// const recreatieButton = document.querySelector("#recreatie, #bouw, #bakker, #wonen, #industrie");
 
-function toggleRecreatieInfo() {
-  alert("recreatie info");
-}
+// function toggleRecreatieInfo() {
+//   alert("recreatie info");
+// }
 
-recreatieButton.addEventListener("click", toggleRecreatieInfo);
+// recreatieButton.addEventListener("click", toggleRecreatieInfo);
