@@ -2,61 +2,47 @@
 
 <main>
 
-
-<section class="intro">
-    <% tno.forEach(tno => {%>
-        <div class="intro-div">
-            <h1>Exposense</h1>
-            <p><%= tno.intro %></p>
-            <p><%= tno.content %></p>
-
-            <%- include('./partials/svg-test') %> 
-             
-        </div>
-
+    <section class="intro">
+        <% tno.forEach(tno => {%>
+            <div class="intro-div">
+                <h1>Exposense</h1>
+                <p><%= tno.intro %></p>
+                <p><%= tno.content %></p>
     
-        
-        <% tno.chapters.slice(0, 1).forEach(chapter => {%>
-
-        <article class="popup-cards">
-            <button class="close-btn"><%- include('./partials/close-btn') %></button>
-                <div class="card-content">
-                    <img src="/svg/exposense SVG/<%= chapter.title %>.svg" class="svg-image">
+                <%- include('./partials/svg-test') %> 
+                 
+            </div>
+            
+            <% tno.chapters.slice(0, 1).forEach(chapter => {%>
+                <article class="popup-cards">
+                    <button class="close-btn"><%- include('./partials/close-btn') %></button>
+                    <div class="card-content">
+                        <img src="/svg/exposense SVG/<%= chapter.title %>.svg" class="svg-image">
                         <div class="text-content">
                             <h2><%= chapter.title %></h2>
                             <p><%- chapter.content %></p> 
                         </div>
-                </div>
-            
-            <a href="<%= chapter.video_url %>" class="bekijk-video">Bekijk de video -></a>
-        </article>
-
-
+                    </div>    
+                    <a href="<%= chapter.video_url %>" class="bekijk-video">Bekijk de video -></a>
+                </article>
+            <%}) %>
         <%}) %>
-
+    </section>
     
-    <%}) %>
-
-</section>
-
-
-
-<div class="center">
-    <button id="open-popup" class="btn">+</button>
-</div>
-<div class="popup" id="popup">
-    <div class="overlay"></div>
-    <div class="popup-content">
-        <div class="controls">
-            <button class="close-btn"><%- include('./partials/close-btn') %></button>
-        </div>
-        <h2>Titel van de popup</h2>
-        <p>Content van de popup</p>
+    <div class="center">
+        <button id="open-popup" class="btn">+</button>
     </div>
-</div>
-
-
-
+    <div class="popup" id="popup">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <div class="controls">
+                <button class="close-btn"><%- include('./partials/close-btn') %></button>
+            </div>
+            <h2>Titel van de popup</h2>
+            <p>Content van de popup</p>
+        </div>
+    </div> 
+    
 </main>
 
 <%- include('./partials/footer') %>
