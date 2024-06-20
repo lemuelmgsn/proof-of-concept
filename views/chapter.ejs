@@ -4,7 +4,6 @@
 
 
 <section class="intro">
-    <% tno.forEach(tno => {%>
         <div class="intro-div">
             <h1>Exposense</h1>
             <p><%= tno.intro %></p>
@@ -13,12 +12,7 @@
             <%- include('./partials/infographic-svg') %>  
         </div>
 
-    
-        
-        <% tno.chapters.slice(1, 2).forEach(chapter => {%>
-
         <article class="popup-cards">
-            <!-- <div class="overlay"></div> -->
             <a href="/" class="close-btn"><%- include('./partials/close-btn') %></a>
                 <div class="card-content">
                     <img src="/svg/exposense SVG/<%= chapter.title %>.svg" class="svg-image">
@@ -32,12 +26,8 @@
         </article>
 
 
-        <%}) %>
-
-    
-    <%}) %>
-
 </section>
+
 
 
 <div class="center">

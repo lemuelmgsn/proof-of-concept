@@ -43,6 +43,13 @@ app.get('/', function(request, response) {
   });
 })
 
+app.get('/chapter/:id', function(request, response) {
+  fetchJson('https://fdnd-agency.directus.app/items/DPI_chapters' + request.params.id).then((apiData) => {
+    response.render('chapter', {
+      chapter: apiData.data})
+  });
+})
+
 
 app.get('/Persoonlijke-blootstellingsprofielen', function(request, response) {
   fetchJson(apiUrl).then((apiData) => {
@@ -67,7 +74,7 @@ app.get('/Kristallijn-silica-sensor', function(request, response) {
 
 app.get('/PM-sensor-met-in-line-chemische-identificatie', function(request, response) {
   fetchJson(apiUrl).then((apiData) => {
-    response.render('PM-sensor met in-line chemische identificatie', {
+    response.render('PM sensor met in-line chemische identificatie', {
       tno: apiData.data})
   });
 })

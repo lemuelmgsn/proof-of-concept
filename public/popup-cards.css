@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     max-width: 40em;
+    max-height: 35em;
     margin: auto;
     margin-bottom: 1em;
     padding: 1em 1em 2em;
@@ -48,4 +49,12 @@ a{
     .svg-image{
         max-height: 400px   ;
     }
+    .popup-cards{
+        position: absolute;
+        top:   5%;
+        left: 0%;
+        right: 0%;
+    }
   }
+
+
