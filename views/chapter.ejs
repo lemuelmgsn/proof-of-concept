@@ -17,12 +17,12 @@
                 <div class="card-content">
                     <img src="/svg/exposense SVG/<%= chapter.title %>.svg" class="svg-image">
                         <div>
-                            <h2><%= chapter.title %></h2>
-                            <p><%- chapter.content %></p> 
+                            <h2><%= chapter.data.title %></h2>
+                            <p><%- tno.content %></p> 
                         </div>
                 </div>
             
-            <a href="<%= chapter.video_url %>" class="bekijk-video">Bekijk de video -></a>
+            <a href="<%= tno.video_url %>" class="bekijk-video">Bekijk de video -></a>
         </article>
 
 

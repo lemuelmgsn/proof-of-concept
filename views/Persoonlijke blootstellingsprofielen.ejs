@@ -18,16 +18,16 @@
         <% tno.chapters.slice(0, 1).forEach(chapter => {%>
 
         <article class="popup-cards">
-            <a href="/" class="close-btn"><%- include('./partials/close-btn') %></a>
+            <a href="/" class="close-btn" aria-label="Sluit knopje"><%- include('./partials/close-btn') %></a>
                 <div class="card-content">
-                    <img src="/svg/exposense SVG/<%= chapter.title %>.svg" class="svg-image">
+                    <img src="/svg/exposense SVG/<%= chapter.title %>.svg" class="svg-image" alt="foto">
                         <div>
                             <h2><%= chapter.title %></h2>
                             <p><%- chapter.content %></p> 
                         </div>
                 </div>
             
-            <a href="<%= chapter.video_url %>" class="bekijk-video">Bekijk de video -></a>
+            <a href="<%= chapter.video_url %>" class="bekijk-video" aria-label="Bekijk de video">Bekijk de video -></a>
         </article>
 
 
