@@ -1,3 +1,20 @@
+fetch('https://fdnd-agency.directus.app/items/DPI_TNO?fields=*.*.*.*')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json(); // Veronderstelt dat de server JSON retourneert
+  })
+  .then(data => {
+    console.log(data); // Verwerkt de verkregen gegevens
+  })
+  .catch(error => {
+    console.error('Er was een probleem met het fetch-verzoek:', error);
+  });
+
+
+
+
 function createPopup(id) {
     // Zoek het popup-element op basis van het doorgegeven id
     let popupNode = document.querySelector(id);
